@@ -1,0 +1,8 @@
+com\example\taskmanager\controller\TaskController.class
+com\example\taskmanager\service\TaskService.class
+com\example\taskmanager\dto\TaskDTO.class
+com\example\taskmanager\entity\Task.class
+com\example\taskmanager\dto\UserDTO.class
+com\example\taskmanager\entity\User.class
+com\example\taskmanager\repository\TaskRepository.class
+com\example\taskmanager\TaskmanagerApplication.class

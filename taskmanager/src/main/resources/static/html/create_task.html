@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Create Task</title>
+</head>
+<body>
+    <h2>Create New Task</h2>
+    <form action="/tasks/save" method="post">
+        <input type="text" name="title" placeholder="Title" required><br>
+        <input type="text" name="description" placeholder="Description"><br>
+        <input type="date" name="dueDate" required><br>
+        <select name="priority">
+            <option value="LOW">Low</option>
+            <option value="MEDIUM">Medium</option>
+            <option value="HIGH">High</option>
+        </select><br>
+        <select name="status">
+            <option value="PENDING">Pending</option>
+            <option value="IN_PROGRESS">In Progress</option>
+            <option value="COMPLETED">Completed</option>
+        </select><br><br>
+        <button type="submit">Save Task</button>
+    </form>
+    <a href="/tasks">Back to List</a>
+</body>
+</html>
