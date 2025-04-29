@@ -2,21 +2,21 @@
   "version": 2,
   "builds": [
     {
-      "src": "target/taskmanager-0.0.1-SNAPSHOT.jar",
+      "src": "target/taskmanager.jar",
       "use": "@vercel/java",
       "config": {
-        "main": "com.taskmanager.TaskManagerApplication"
+        "main": "com.example.TaskManagerApplication"
       }
     }
   ],
   "routes": [
     {
       "src": "/taskmanager/(.*)",
-      "dest": "target/taskmanager-0.0.1-SNAPSHOT.jar"
+      "dest": "target/taskmanager.jar"
     },
     {
       "src": "/(.*)",
-      "dest": "target/taskmanager-0.0.1-SNAPSHOT.jar"
+      "dest": "target/taskmanager.jar"
     }
   ]
 }
