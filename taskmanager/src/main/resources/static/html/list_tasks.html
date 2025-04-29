@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Task List</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>📝 Task List</h1>
+        <div class="button-group">
+            <a class="btn" href="/">🏠 Home</a>
+            <a class="btn" href="/tasks/create">➕ Create Task</a>
+            <a class="btn btn-outline" href="/tasks">🔄 Refresh</a>
+        </div>
+    </header>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Due Date</th>
+                <th>Priority</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="task : ${tasks}">
+                <td th:text="${task.id}"></td>
+                <td th:text="${task.title}"></td>
+                <td th:text="${task.description}"></td>
+                <td th:text="${task.dueDate}"></td>
+                <td th:text="${task.priority}"></td>
+                <td th:text="${task.status}"></td>
+                <td>
+                    <a class="btn btn-outline" th:href="@{/tasks/delete/{id}(id=${task.id})}">❌ Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="footer">
+        <p>&copy; 2025 Task Manager App</p>
+    </div>
+</div>
+</body>
+</html>
